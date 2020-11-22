@@ -1,0 +1,9 @@
+Kasia Góralczyk-strona:
+
+dane logowania webd.pl: fhucora / 123fhucora45
+
+CPANEL(fhucora.webd.pl:2083):
+login: fhucora
+hasło: d349tDw2zn0f
+
+kopia starego portalu znajduje się w katalogu /www/(BACKUP)cora-goralczyk.pl
