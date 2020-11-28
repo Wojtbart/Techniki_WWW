@@ -1,7 +1,6 @@
 * {
     margin: 0;
     padding: 0;
-    /* box-sizing: border-box; */
     font-family: "Roboto", arial, sans-serif;
 }
 
@@ -14,12 +13,7 @@
 
 body {
     min-height: 100vh;
-}
 
-nav {
-
-    /* width: auto; */
-    /* position: fixed; */
 }
 
 nav ul {
@@ -28,15 +22,9 @@ nav ul {
     position: relative;
 }
 
-
-
 nav ul li {
     display: inline-block;
     padding: 20px 0px 20px 0;
-    /* position: relative; */
-    /* height: 25px; */
-    /* margin: 0 auto; */
-
 }
 
 nav ul li a {
@@ -45,32 +33,20 @@ nav ul li a {
     text-decoration: none;
     text-align: center;
     width: 180px;
-    /* padding: 10px; */
     font-size: 18px;
     line-height: 30px;
-    /* height: 40px; */
     color: white;
-    /* border: 1px solid white; */
     transition: .3s;
-    /* position: absolute; */
-
 }
 
 nav ul li:nth-child(1) {
     height: 30px;
     margin-right: 22.4vw;
-    /* max-height: 40px;
-    min-height: 39px; */
 }
 
 nav ul li:nth-child(1) a p {
-    /* position: relative; */
-    /* margin-bottom: -30px; */
-    padding: 0px 0px 0px 0;
-    /* height: 30px; */
     text-indent: -9999px;
 }
-
 
 nav ul li a img {
     position: absolute;
@@ -78,21 +54,7 @@ nav ul li a img {
     left: 8px;
     height: 60px;
     z-index: 2;
-    /* transform: scaleY(0.5);
-    transform: scaleX(0.5); */
-
-    /* background-image: url(img/noweLog.png); */
-    /* margin: 0;
-    padding: 0; */
-    /* margin-top: 20px; */
-    /* height: 40px; */
-
-    /* width: 180px; */
     object-fit: cover;
-    /* object-position: -50px -50px; */
-    /* background-size: cover; */
-    /* background-origin: content-box, padding-box; */
-    /* display: block; */
 }
 
 nav ul li:hover {
@@ -104,10 +66,221 @@ nav ul li:nth-child(1):hover {
     background-color: #f36639;
 }
 
+.menu_hamburger {
+    color: white;
+    display: none;
+}
+
+.menu_hamburger.active {
+    display: none;
+}
 
 
+@media (orientation: portrait) and (min-width: 320px) {
+
+    .menu_hamburger {
+        position: absolute;
+        font-size: 40px;
+        top: 15px;
+        right: 30px;
+        line-height: 50px;
+        display: block;
+        transition: .3s linear;
+    }
+
+    .fas.fa-times {
+        display: none;
+        color: gray;
+    }
+
+    nav ul.show {
+        height: 60vh;
+    }
+
+    nav ul li:nth-child(n+2) {
+        display: none;
+    }
+
+    nav ul li:nth-child(n+2).show {
+        position: relative;
+        top: 10px;
+        left: 10px;
+        display: flex;
+    }
+
+    nav ul li:nth-child(n+2).show a {
+        position: absolute;
+        left: 23%;
+        top: 15px;
+        text-align: center;
+        font-size: 18px;
+    }
+
+    nav ul li.show {
+        left: 0;
+    }
+
+    .fa_bars {
+        display: block;
+        height: 30px;
+        font-size: 30px;
+        width: 30px;
+        color: green;
+    }
+}
+
+@media (orientation: portrait) and (min-width: 410px) {
+    nav ul.show {
+        height: 55vh;
+    }
+
+}
+
+@media (orientation: portrait) and (min-width: 768px) {
+    .menu_hamburger {
+        font-size: 40px;
+        top: 12px;
+        right: 60px;
+    }
+
+    nav ul.show {
+        height: 38vh;
+    }
+
+    nav ul li:nth-child(n+2).show a {
+        left: 35%;
+        top: 20px;
+    }
+}
+
+@media (orientation: landscape) {}
+
+@media (orientation: landscape) and (max-width: 1023px) {
+    .menu_hamburger {
+        position: absolute;
+        font-size: 40px;
+        top: 10px;
+        right: 50px;
+        line-height: 50px;
+        display: block;
+        transition: .3s linear;
+    }
+
+    .fas.fa-times {
+        display: none;
+        color: gray;
+    }
+
+    nav ul.show {
+        height: 70vh;
+    }
+
+    nav ul li:nth-child(n+2) {
+        display: none;
+    }
+
+    nav ul li:nth-child(n+2).show {
+        position: relative;
+        top: -18px;
+        left: 30px;
+        display: flex;
+        padding-bottom: 15px;
+    }
+
+    nav ul li:nth-child(n+2) {
+        padding: 10px;
+    }
+
+    nav ul li:nth-child(n+2).show a {
+        position: absolute;
+        left: 32%;
+        top: 15px;
+        text-align: center;
+        font-size: 15px;
+    }
+
+    nav ul li.show {
+        left: 0;
+    }
+
+    .fa_bars {
+        display: block;
+        height: 30px;
+        font-size: 30px;
+        width: 30px;
+        color: green;
+    }
+}
+
+@media (orientation: landscape) and (max-width: 1279px) {
+
+    nav ul li {
+        display: inline-block;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    nav ul li a {
+        width: 110px;
+        font-size: 13px;
+        line-height: 30px;
+        color: white;
+        transition: .3s;
+    }
+
+    nav ul li:nth-child(1) {
+        margin-right: 6vw;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 1280px) and (max-width: 1380px) {
+
+    nav ul li {
+        display: inline-block;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    nav ul li a {
+        width: 146px;
+        font-size: 13px;
+        line-height: 30px;
+        color: white;
+        transition: .3s;
+    }
+
+    nav ul li:nth-child(1) {
+        margin-right: 3vw;
+    }
+}
 
 
+@media (orientation: landscape) and (min-width: 1380px) and (max-width: 1680px) {
+    nav ul li {
+        display: inline-block;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    nav ul li a {
+        width: 153px;
+        font-size: 16px;
+        line-height: 30px;
+        color: white;
+        transition: .3s;
+    }
+
+    nav ul li:nth-child(1) {
+        margin-right: 7vw;
+    }
+
+}
+
+@media (orientation: landscape) and (min-width: 1600px) {}
+
+/* 
+SLIDEREK---------------------------------------------------------------------------
+ */
 
 .slider {
     position: relative;
@@ -115,6 +288,7 @@ nav ul li:nth-child(1):hover {
     width: 100%;
     height: 91vh;
 }
+
 
 .slider img {
     position: absolute;
@@ -156,6 +330,17 @@ nav ul li:nth-child(1):hover {
 .dots span.active {
     box-shadow: 0 0 0 5px white, 0 0 3px 10px red;
 }
+
+
+/* @media (orientation: portrait) and (min-width: 360px) {
+    .slider {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: 80vh;
+    }
+
+} */
 
 .descriptionAbout {
     background-color: #ecebe4;
