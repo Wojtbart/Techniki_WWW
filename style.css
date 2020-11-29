@@ -1,7 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Texturina:wght@500&display=swap');
+
 * {
     margin: 0;
     padding: 0;
-    font-family: "Roboto", arial, sans-serif;
 }
 
 /* żeby elementy blokowe przechodziły nizej */
@@ -13,6 +14,7 @@
 
 body {
     min-height: 100vh;
+    font-family: "Roboto", arial, sans-serif;
 
 }
 
@@ -20,11 +22,13 @@ nav ul {
     list-style: none;
     background-color: #f36639;
     position: relative;
+    box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, .2);
 }
 
 nav ul li {
     display: inline-block;
     padding: 20px 0px 20px 0;
+
 }
 
 nav ul li a {
@@ -282,7 +286,7 @@ nav ul li:nth-child(1):hover {
 SLIDEREK---------------------------------------------------------------------------
  */
 
-.slider {
+/* .slider {
     position: relative;
     overflow: hidden;
     width: 100%;
@@ -298,7 +302,291 @@ SLIDEREK------------------------------------------------------------------------
     left: 50%;
     transform: translate(-50%, -50%);
 
+    transition: 0.4s;
+    animation: slide 5s linear infinite;
+    /* animation-delay: 0.3s; 
+
+}*/
+
+/* .slider img .active {
+    opacity: 0;
+}  */
+
+.slider4.slider .element-text {
+    font-family: 'Cormorant Garamond', serif;
 }
+
+.slider4.slider .element-title {
+    font-family: 'Amatic SC', cursive;
+    text-transform: none;
+    font-size: 8rem;
+    margin-bottom: 3rem;
+    font-weight: normal;
+}
+
+.slider4.slider {
+    background: #333;
+}
+
+.slider4.slider .slider-slide:nth-child(1) {
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
+        url(img/photo1.jpeg);
+    background-size: cover;
+    background-position: center center;
+}
+
+.slider4.slider .slider-slide:nth-child(2) {
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
+        url(img/photo2.jpeg);
+    background-size: cover;
+    background-position: center center;
+}
+
+.slider4.slider .slider-slide:nth-child(3) {
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
+        url(img/photo3.jpeg);
+    background-size: cover;
+    background-position: center center;
+}
+
+
+.slider {
+    position: relative;
+    background: #eee;
+    background-size: cover;
+    background-position: center center;
+}
+
+.slider-slides-cnt {
+    height: 700px;
+    position: relative;
+}
+
+.slider-slide {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    z-index: 0;
+}
+
+.slider-slide-active {
+    opacity: 1;
+    z-index: 1;
+}
+
+.slider .element-title {
+    color: #fff;
+    font-family: sans-serif;
+    position: relative;
+    left: -3rem;
+    opacity: 0;
+    font-size: 6rem;
+    text-transform: uppercase;
+    font-weight: normal;
+    margin-top: 0;
+    text-align: center;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.slider .element-text {
+    color: #fff;
+    position: relative;
+    left: -3rem;
+    opacity: 0;
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, .6);
+    padding-left: 4rem;
+    padding-right: 4rem;
+    text-align: center;
+    font-family: serif;
+    font-style: italic;
+    max-width: 60%;
+}
+
+/* animacja */
+
+
+.slider-slide {
+    opacity: 0;
+    transition: 0.4s all;
+}
+
+.slider-slide-active {
+    opacity: 1;
+}
+
+.slider .element-title {
+    left: -3rem;
+    opacity: 0;
+    transition: 2s left, 2s opacity;
+}
+
+.slider .element-text {
+    left: -3rem;
+    opacity: 0;
+    transition: 2s 1s left, 2s 1s opacity;
+}
+
+.slider-slide-active .element-title {
+    left: 0;
+    opacity: 1;
+}
+
+.slider-slide-active .element-text {
+    left: 0;
+    opacity: 1;
+}
+
+.slider-button-prev,
+.slider-button-next {
+    cursor: pointer;
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4rem;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    border: 0;
+    text-indent: -999px;
+    overflow: hidden;
+}
+
+.slider-button-next {
+    left: auto;
+    right: 0;
+}
+
+.slider-button-prev:focus,
+.slider-button-next:focus {
+    outline: none;
+}
+
+.slider-button-prev:before,
+.slider-button-next:before {
+    content: '<';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 2rem;
+    color: #fff;
+    text-indent: 0;
+}
+
+.slider-button-next:before {
+    content: '>';
+}
+
+.slider-dots {
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    bottom: 1rem;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.slider-dots-element {}
+
+.slider-dots-button {
+    background: transparent;
+    width: 2rem;
+    height: 2rem;
+    border: 0;
+    text-indent: -999px;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+}
+
+.slider-dots-button:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: transparent;
+    width: 0.9rem;
+    height: 0.9rem;
+    border-radius: 50%;
+    transition: 0.5s all;
+    box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.5);
+}
+
+.slider-dots-element-active .slider-dots-button:before {
+    background: #fff;
+    transform: translate(-50%, -50%) scale(1.2);
+}
+
+.slider-dots-button:focus {
+    outline: none;
+}
+
+
+/* 
+
+
+Sliderek zobaczymy
+
+
+
+
+
+
+
+
+*/
+
+
+
+
+@keyframes slide {
+    0% {
+        left: 125%;
+    }
+
+    20% {
+        left: 100%;
+    }
+
+    40% {
+        left: 75%;
+    }
+
+    60% {
+        left: 50%;
+    }
+
+    90% {
+        left: 50%;
+    }
+
+    95% {
+        left: 50%;
+    }
+
+
+}
+
 
 .slider h1 {
     position: absolute;
@@ -331,21 +619,14 @@ SLIDEREK------------------------------------------------------------------------
     box-shadow: 0 0 0 5px white, 0 0 3px 10px red;
 }
 
-
-/* @media (orientation: portrait) and (min-width: 360px) {
-    .slider {
-        position: relative;
-        overflow: hidden;
-        width: 100%;
-        height: 80vh;
-    }
-
-} */
+/* 
+trzy divy --------------------------------------------------------------
+ */
 
 .descriptionAbout {
     background-color: #ecebe4;
     padding: 20px 0;
-    height: 60vh;
+    height: 40vh;
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -353,8 +634,6 @@ SLIDEREK------------------------------------------------------------------------
     text-align: center;
     margin: 20px 0 40px 0;
     font-size: 30px;
-
-
 }
 
 .descriptionAbout .containerAbout {
@@ -395,101 +674,114 @@ SLIDEREK------------------------------------------------------------------------
 
 }
 
-.contact {
-    background-color: #333;
+/* 
+    TEKST-----------------------------------------------------------------
+ */
+
+.text {
+    height: 40vh;
+    padding: 40px;
+    background-color: #ecebe4;
+    padding-bottom: 20px;
+    /* top: 10px; */
+    /* position: absolute; */
+}
+
+.text h1 {
+    text-align: center;
     padding: 20px;
-    position: relative;
-    height: 35vh;
+    font-size: 45px;
+}
+
+.text ul {
+    list-style: dotted;
+    list-style-position: inside;
+    padding: 20px;
+
+}
+
+.text ul li {
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+
+}
+
+.text p {
+    font-size: 20px;
+    text-align: center;
+}
+
+/*
+TESKT O NAS--------------------------------------------------- 
+
+ */
+.aboutInfo {
+    background-color: #ecebe4;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 93vh;
+}
+
+.aboutInfo h1 {
+    flex-basis: 100%;
+    flex-grow: 0;
+    text-align: center;
+    padding: 30px;
+    color: rgb(231, 69, 69);
+    font-size: 50px;
+}
+
+.aboutInfo p {
+    font-family: "Poppins", sans-serif;
+    width: 70%;
+    /* flex-grow: 1; */
+    text-align: center;
+    padding: 30px;
+    font-size: 18px;
+}
+
+/* 
+    KONTAKT-----------------------------------------------------------------
+ */
+
+.contact {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #ecebe4;
+    padding: 20px;
+    height: 83.6vh;
+    flex-wrap: wrap;
+    font-family: 'Texturina', sans-serif;
+}
+
+.contact .info {
+
+    width: 100%;
+    flex-basis: 35%;
 }
 
 .contact h1 {
-
     text-align: center;
-    color: rgb(132, 167, 167);
-}
-
-.contact .wrap {
-    height: 20vh;
-    position: absolute;
-    top: 20%;
-    left: 50%;
-}
-
-form {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.contact .wrap input {
-    border: none;
-    padding: 8px 15px 8px 15px;
-    background: #e7a156;
-    color: #fff;
-    box-shadow: 1px 1px 4px #DADADA;
-    border-radius: 3px;
-    width: 50%;
-    height: 1.4rem;
-    margin-bottom: 30px;
-}
-
-.contact .wrap textarea {
-    border: none;
-    padding: 8px 15px 8px 15px;
-    background: #ffca92;
-    color: #fff;
-    box-shadow: 1px 1px 4px #DADADA;
-    border-radius: 3px;
-    width: 50%;
-    height: 10vh;
-    /* margin-bottom: 20px; */
-    position: absolute;
-    top: 21%;
-    left: 85%;
-}
-
-.contact .wrap h3 {
-    margin-left: 17vw;
-    color: white;
-    margin-bottom: 20px;
-}
-
-button {
-    margin-top: 3%;
-    padding: 10px;
-    border: none;
-    background-color: #3F51B5;
-    color: #fff;
-    font-weight: 600;
-    border-radius: 5px;
-    width: 60%;
-    position: absolute;
-    top: 90%;
-    left: 50%;
-}
-
-footer {
-    padding: 10px;
-    height: 3vh;
-    text-align: center;
-    /* text-transform: uppercase; */
-    background-color: rgb(27, 24, 24);
-    color: rgb(29, 146, 117);
-}
-
-footer span {
-    color: rgb(109, 100, 20);
+    color: rgb(33, 51, 51);
+    font-size: 40px;
 }
 
 .icons {
-    position: absolute;
-    top: 25%;
-    left: 7%;
-
+    text-align: center;
+    flex-grow: 1;
+    padding: 20px;
+    font-size: 23px;
 }
 
 .icons p {
-    color: white;
+    color: #001f3f;
 }
 
 .icons a {
@@ -497,26 +789,97 @@ footer span {
 }
 
 .icons p:nth-child(even) a {
-
-    color: rgb(90, 194, 125);
-}
-
-.icons p:nth-child(5) a {
-
     color: rgb(77, 166, 218);
 }
 
-.icons p:nth-child(5) i {
-    padding-right: 20px;
+.icons p:nth-child(5) a {
+    color: rgb(77, 166, 218);
 }
 
 .icons i {
-    color: white;
+    color: rgb(189, 148, 82);
     padding: 10px;
-    font-size: 24px;
+    font-size: 23px;
 }
 
 .icons i:hover {
     color: rgb(67, 94, 214);
+}
 
+.contact .wrapForm {
+    width: 100%;
+    flex-basis: 50%;
+
+}
+
+.contact .wrapForm h3 {
+    color: black;
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+}
+
+.contact .wrapForm input {
+    /* border: 2px solid black; */
+    border: none;
+    padding: 8px 15px 8px 15px;
+    background: #e0ddf6;
+    color: #fff;
+    box-shadow: 2px 2px 8px #DADADA;
+    border-radius: 3px;
+    width: 50%;
+    height: 8%;
+}
+
+.contact .wrapForm textarea {
+    border: none;
+    padding: 8px 15px 8px 15px;
+    background: #ffca92;
+    color: #fff;
+    box-shadow: 1px 1px 4px #DADADA;
+    border-radius: 3px;
+    width: 50%;
+    height: 30%;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    background-color: #3F51B5;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 5px;
+    width: 15%;
+    margin-bottom: 20px;
+}
+
+
+/* 
+STOPKA-------------------------------------------------------------
+ */
+
+footer {
+    padding: 10px;
+    /* position: absolute;
+    bottom: 0;
+    left: 0; */
+    height: 3vh;
+    text-align: center;
+    /* text-transform: uppercase; */
+    background-color: rgb(27, 24, 24);
+    /* color: rgb(29, 146, 117); */
+    color: rgb(199, 194, 194);
+}
+
+footer span {
+    color: rgb(199, 194, 194);
 }

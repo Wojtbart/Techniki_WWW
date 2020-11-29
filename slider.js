@@ -34,8 +34,16 @@ const changeSlide=()=>{
         active=0;
     }
     image.src=slideList[active].img;
+    
+    // image.style.WebkitTransition = 'opacity 1s';
     h1.textContent=slideList[active].text;
     changeDot();
 };
 
+const opacity=()=>{
+
+   image.classList.add(".slider img .active")
+   h1.classList.add(".slider img .active")
+};
+setInterval(opacity,300)
 setInterval(changeSlide,time)
