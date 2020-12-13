@@ -14,7 +14,7 @@ const slideList=[
 ]
 
 let active=0;
-const time=5000; //w ms
+const time=10000; //w ms
 
 const image=document.querySelector('img.sliderImg')
 const h1=document.querySelector('.slider h1')

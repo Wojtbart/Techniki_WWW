@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Texturina:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
 * {
     margin: 0;
@@ -280,89 +283,43 @@ nav ul li:nth-child(1):hover {
 
 }
 
-@media (orientation: landscape) and (min-width: 1600px) {}
 
 /* 
 SLIDEREK---------------------------------------------------------------------------
  */
 
-/* .slider {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    height: 91vh;
-}
-
-
-.slider img {
-    position: absolute;
-    min-width: 100%;
-    min-height: 100%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    transition: 0.4s;
-    animation: slide 5s linear infinite;
-    /* animation-delay: 0.3s; 
-
-}*/
-
-/* .slider img .active {
-    opacity: 0;
-}  */
-
-.slider4.slider .element-text {
-    font-family: 'Cormorant Garamond', serif;
-}
-
 .slider4.slider .element-title {
     font-family: 'Amatic SC', cursive;
     text-transform: none;
-    font-size: 8rem;
+    font-size: 5rem;
     margin-bottom: 3rem;
-    font-weight: normal;
-}
-
-.slider4.slider {
-    background: #333;
 }
 
 .slider4.slider .slider-slide:nth-child(1) {
-    background:
-        linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
-        url(img/photo1.jpeg);
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url(img/photo1.jpeg);
     background-size: cover;
     background-position: center center;
 }
 
 .slider4.slider .slider-slide:nth-child(2) {
-    background:
-        linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
-        url(img/photo2.jpeg);
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url(img/photo2.jpeg);
     background-size: cover;
     background-position: center center;
 }
 
 .slider4.slider .slider-slide:nth-child(3) {
-    background:
-        linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
-        url(img/photo3.jpeg);
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url(img/photo3.jpeg);
     background-size: cover;
     background-position: center center;
 }
 
-
 .slider {
     position: relative;
-    background: #eee;
-    background-size: cover;
-    background-position: center center;
 }
 
 .slider-slides-cnt {
     height: 700px;
-    position: relative;
+    /* position: relative; */
 }
 
 .slider-slide {
@@ -649,7 +606,7 @@ trzy divy --------------------------------------------------------------
 .descriptionAbout .containerAbout .about {
     padding: 20px;
     width: 25vw;
-    height: 20vh;
+    height: 25vh;
     text-align: center;
     background-color: rgb(241, 120, 38);
     transition: 1s;
@@ -675,11 +632,12 @@ trzy divy --------------------------------------------------------------
 }
 
 /* 
-    TEKST-----------------------------------------------------------------
+    TEKST home-----------------------------------------------------------------
  */
 
 .text {
-    height: 40vh;
+    /* display: flex; */
+    /* height: 60vh; */
     padding: 40px;
     background-color: #ecebe4;
     padding-bottom: 20px;
@@ -723,7 +681,7 @@ TESKT O NAS---------------------------------------------------
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    height: 93vh;
+    min-height: 93vh;
 }
 
 .aboutInfo h1 {
@@ -744,9 +702,385 @@ TESKT O NAS---------------------------------------------------
     font-size: 18px;
 }
 
+/*
+TESKT SKLEP--------------------------------------------------- 
+
+ */
+
+.aboutInfoShop {
+    background-color: #ecebe4;
+    /*ecebe4; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 120vh;
+    padding: 20px;
+}
+
+.aboutInfoShop .haki,
+.boxy,
+.bagazniki,
+.uklad {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    box-shadow: 4px 4px 8px #d1cfcf;
+    background-color: #e7e7df;
+    margin: 10px;
+    border-radius: 25px;
+}
+
+.uklad ul {
+    list-style: none;
+}
+
+.uklad ul li {
+    /* display: inline-block; */
+    /* padding: 20px */
+    /* list-style: none; */
+
+}
+
+.uklad ul li a {
+    display: block;
+    /* text-transform: uppercase; */
+    text-decoration: none;
+    list-style: none;
+    /* text-align: center; */
+    /* width: 18px; */
+    font-size: 18px;
+    padding: 10px;
+    /* line-height: 30px; */
+    color: rgb(148, 150, 245);
+
+    /* transition: .3s; */
+}
+
+.uklad ul li a:hover {
+    color: brown;
+}
+
+.aboutInfoShop h1 {
+    flex-basis: 100%;
+    /* flex-grow: 0; */
+    text-align: center;
+    padding: 5px;
+    color: rgb(231, 69, 69);
+    font-size: 50px;
+
+}
+
+.aboutInfoShop p {
+    font-family: "Poppins", sans-serif;
+    width: 100%;
+    /* flex-grow: 1; */
+    text-align: center;
+    padding: 5px;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.aboutInfoShop p:nth-of-type(8),
+p:nth-of-type(9) {
+    font-family: "Poppins", sans-serif;
+    width: 65%;
+    /* flex-grow: 1; */
+    text-align: center;
+    padding: 20px;
+    font-size: 20px;
+}
+
+/*
+TESKT SKLEP--------------------------------------------------- 
+
+ */
+
+.aboutInfoWorkshop {
+    background-color: #ecebe4;
+    /*ecebe4; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 120vh;
+    padding: 20px;
+}
+
+
+.aboutInfoWorkshop h1 {
+    flex-basis: 100%;
+    text-align: center;
+    padding: 20px;
+    color: rgb(231, 69, 69);
+    font-size: 50px;
+}
+
+.aboutInfoWorkshop .imageWorkshopImg {
+    width: 50vw;
+    height: 40vh;
+    background-image: url("img/ukladWyd2.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    border-radius: 20px;
+    border: 3px solid goldenrod;
+    padding: 15px;
+}
+
+.aboutInfoWorkshop .imageWorkshopImg2 {
+    width: 50vw;
+    height: 40vh;
+    background-image: url("img/katalizator.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    border-radius: 20px;
+    border: 3px solid goldenrod;
+    padding: 15px;
+}
+
+
+
+.aboutInfoWorkshop ul li a {
+    display: block;
+    /* text-transform: uppercase; */
+    text-decoration: none;
+
+    /* text-align: center; */
+    /* width: 18px; */
+    font-size: 18px;
+    margin-left: 10px;
+    padding: 10px;
+    /* line-height: 30px; */
+    color: black;
+
+    /* transition: .3s; */
+}
+
+.aboutInfoWorkshop h2 {
+    flex-basis: 100%;
+    text-align: center;
+    padding: 10px;
+    color: rgb(231, 69, 69);
+    font-size: 35px;
+    margin-top: 20px;
+}
+
+.aboutInfoWorkshop p {
+    font-family: "Poppins", sans-serif;
+    width: 70%;
+    /* flex-grow: 1; */
+    text-align: center;
+    padding: 15px;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 10px;
+}
+
+.aboutInfoWorkshop p:nth-of-type(4),
+p:nth-of-type(5) {
+    /* font-family: "Poppins", sans-serif; */
+    width: 70%;
+    /* flex-grow: 1; */
+    text-align: center;
+    padding: 15px;
+    font-size: 17px;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 10px;
+}
+
+/*
+TESKT OFERTA--------------------------------------------------- 
+
+ */
+.aboutInfoOffer {
+    background-color: #ecebe4;
+    position: relative;
+    /*ecebe4; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.bgImg {
+    margin: 0;
+    padding: 0;
+    width: 99vw;
+    height: 140vh;
+    background-image: url(img/tlo.jpg);
+    background-repeat: no-repeat;
+    position: absolute;
+    background-size: cover;
+    background-origin: border-box;
+    top: 40%;
+    left: 0;
+    /* transform: translate(-50%, -50%); */
+    opacity: 0.1;
+}
+
+.bgImg2 {
+    width: 99vw;
+    height: 100vh;
+    background-size: cover;
+    background-image: url(img/tlo2.jpg);
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* top: 20%;
+    left: 80%; */
+    /* transform: translate(-50%, -50%); */
+    opacity: 0.1;
+}
+
+
+.aboutInfoOffer h1 {
+    flex-basis: 100%;
+    text-align: center;
+    padding: 20px;
+    color: rgb(231, 69, 69);
+    font-size: 50px;
+}
+
+
+
+.aboutInfoOffer .imageWorkshopImg {
+    width: 50vw;
+    height: 40vh;
+    background-image: url("img/ukladWyd2.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    border-radius: 20px;
+    border: 3px solid goldenrod;
+    padding: 15px;
+}
+
+.aboutInfoOffer .imageWorkshopImg2 {
+    width: 50vw;
+    height: 40vh;
+    background-image: url("img/katalizator.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    border-radius: 20px;
+    border: 3px solid goldenrod;
+    padding: 15px;
+}
+
+.aboutInfoOffer .firstUl {
+    list-style: none;
+}
+
+.aboutInfoOffer ul li a {
+    display: block;
+    /* text-transform: uppercase; */
+    text-decoration: none;
+
+    /* text-align: center; */
+    /* width: 18px; */
+    font-size: 18px;
+    margin-left: 10px;
+    padding: 10px;
+    /* line-height: 30px; */
+    color: rgb(51, 3, 3);
+
+    /* transition: .3s; */
+}
+
+.aboutInfoOffer h2 {
+    flex-basis: 100%;
+    text-align: center;
+    padding: 10px;
+    color: rgb(231, 69, 69);
+    font-size: 35px;
+    margin-top: 20px;
+
+}
+
+.aboutInfoOffer h4 {
+    flex-basis: 100%;
+    text-align: center;
+    padding: 10px;
+    color: rgb(69, 80, 231);
+    font-size: 25px;
+    margin-top: 20px;
+
+}
+
+.aboutInfoOffer h5 {
+    flex-basis: 100%;
+    text-align: center;
+    padding: 10px;
+    color: rgb(69, 80, 231);
+    font-size: 25px;
+    margin-top: 20px;
+}
+
+.secondUl {
+    width: 70%;
+    list-style: square;
+    /* margin: 0 auto;
+    vertical-align: middle; */
+}
+
+.secondUl li {
+    margin-left: 6vw;
+}
+
+.secondUl li a {
+    /* display: block; */
+    /* text-align: center; */
+    /* text-transform: uppercase; */
+    text-decoration: none;
+    margin: 0 auto;
+    /* text-align: center; */
+    /* width: 18px; */
+    font-size: 18px;
+    /* margin-left: 100px; */
+    padding: 10px;
+    /* line-height: 30px; */
+    color: rgb(51, 3, 3);
+
+    /* transition: .3s; */
+}
+
+.aboutInfoOffer p {
+    font-family: 'Lato', sans-serif;
+    width: 70%;
+    /* flex-grow: 1; */
+    text-align: center;
+    padding: 15px;
+    font-size: 20px;
+    /* font-family: 'Montserrat', sans-serif; */
+    margin-top: 10px;
+}
+
+/* .aboutInfoOffer p:nth-of-type(4),
+p:nth-of-type(5) {
+    font-family: "Poppins", sans-serif;
+    width: 70%;
+    text-align: center;
+    padding: 15px;
+    font-size: 17px;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 10px;
+} */
+
 /* 
     KONTAKT-----------------------------------------------------------------
  */
+
 
 .contact {
 
