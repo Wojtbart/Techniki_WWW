@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('bgcBody2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.login_form {
+    font-family: 'Poppins', sans-serif;
+    margin: 0 auto;
+    width: 30%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    padding: 20px 0;
+}
+
+#username,
+#password {
+    width: 60%;
+    margin-left: 20%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    margin-bottom: 15px;
+    outline: none;
+}
+
+#submit {
+    margin-left: 25%;
+    width: 50%;
+    text-align: center;
+    padding: 15px;
+    background-color: #535b63;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    color: #fff;
+    outline: none;
+}
+
+#registrationLink {
+    margin: 0 auto;
+    display: block;
+    font-size: 1.2rem;
+    color: rgb(116, 5, 5);
+    text-decoration: none;
+    text-align: center;
+    padding: 1em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
